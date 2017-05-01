@@ -1,5 +1,5 @@
 // for linux:
-//nvcc self-assembly-gpu.cu -o temp -lcudart
+// nvcc self-assembly-gpu.cu -o temp -lcudart
 
 #include <sys/time.h>
 #include <stdio.h>
@@ -123,7 +123,7 @@ void errorCheck(const char *message)
 
   if(error != cudaSuccess)
   {
-    printf("\n CUDA ERROR: %s = %s\n", message, cudaGetErrorString(error));
+    printf("\n CUDA ERROR: %s - %s\n", message, cudaGetErrorString(error));
     exit(0);
   }
 }
